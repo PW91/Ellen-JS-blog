@@ -1,0 +1,61 @@
+@import "../../node_modules/keystone/admin/public/styles/keystone.less";
+.auth-wrapper {
+	max-width: 300px;
+	margin: 0;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.auth-box {
+	border: none;
+	box-shadow: none;
+}
+
+.auth-box__brand {
+	display: none;
+}
+
+.auth-box__col:first-child {
+	display: none;
+}
+
+.auth-box__col:last-child {
+	width: 100%;
+}
+
+.base_b0alru-o_O-base_xhel8e {
+	box-shadow: none;
+}
+
+.auth-footer {
+	display: none;
+}
+
+.base_b0alru-o_O-base_xhel8e {
+	width: 100%;
+}
+
+.primary-navbar {
+	background-color: black;
+}
+
+.primary-navbar__item--active .primary-navbar__link {
+	background-color: grey;
+}
+
+.primary-navbar__item--active {
+	box-shadow: none;
+}
+
+.dashboard-group__list-label {
+	color: black;
+}
+a,
+.a,
+a:hover,
+.a:hover,
+a:focus,
+.a:focus {
+	color: black;
+}
