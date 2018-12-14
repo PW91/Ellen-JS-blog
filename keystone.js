@@ -12,8 +12,8 @@ var nunjucks = require("nunjucks");
 // and documentation.
 
 keystone.init({
-	name: "My Site",
-	brand: "My Site",
+	name: "Marek drives",
+	brand: "Marek drives",
 
 	sass: "public",
 	static: "public",

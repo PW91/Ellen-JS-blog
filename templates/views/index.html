@@ -1,15 +1,16 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-	<section class='section hero'>
 	<div class="wrap">
+	<section class='section'>
 
 
 
 
-		</div>
+
+
 	</section>
-	<section class='section newsletter'>
+	<section class='section'>
 {% if enquirySubmitted %}
 			<h3>Thanks for getting in touch.</h3>
 		{% else %}
@@ -37,22 +38,23 @@
 	</section>
 
 
-<section class='section blog'>
+<section class='section'>
 {% macro blogPost(post) %}
 <div class="post" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
 	<h2>
 		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
 	</h2>
-	<p class="lead text-muted">Posted
+	<p class="lead text-muted">
+		<div class='post-date-wrap'>
 		{% if post.publishedDate %}
-			<br>on {{ post._.publishedDate.format("MMMM Do, YYYY") }}
+		{{ post._.publishedDate.format("MMMM Do, YYYY") }}
 		{% endif %}
+		</div>
+		<div class='post-categories-wrap'>
 		{% if post.categories and post.categories.length %}
-			<br>in {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
+	{% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
 		{% endif %}
-		{% if post.author %}
-			<br>by {{ post.author.name.first }}
-		{% endif %}
+		</div>
 	</p>
 	{% if post.image.exists %}
 		<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
@@ -60,7 +62,7 @@
 	<p>{{ post.content.brief|safe }}</p>
 	{% if post.content.extended %}
 		<p class="read-more">
-			<a href="/blog/post/{{ post.slug }}">Read more...</a>
+			<a href="/blog/post/{{ post.slug }}">Czytaj dalej</a>
 		</p>
 	{% endif %}
 </div>
@@ -83,6 +85,7 @@
 					{% else %}
 						<h4 class="text-weight-normal">Showing {{ utils.plural(data.posts.results.length, "* post") }}.</h4>
 					{% endif %}
+<br/>
 					<div class="blog">
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 					</div>
@@ -155,7 +158,7 @@
 
 
 
-
+		</div>
 
 
 

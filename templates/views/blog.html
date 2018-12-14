@@ -5,15 +5,12 @@
 	<h2>
 		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
 	</h2>
-	<p class="lead text-muted">Posted
+	<p class="lead text-muted">
 		{% if post.publishedDate %}
 			<br>on {{ post._.publishedDate.format("MMMM Do, YYYY") }}
 		{% endif %}
 		{% if post.categories and post.categories.length %}
-			<br>in {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
-		{% endif %}
-		{% if post.author %}
-			<br>by {{ post.author.name.first }}
+			<br> {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
 		{% endif %}
 	</p>
 	{% if post.image.exists %}
