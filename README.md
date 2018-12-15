@@ -1,3 +1,3 @@
-# Simple JS Blog
+# Ellen JS Blog
 
 Technology stack: KeystoneJS, MongoDB.
