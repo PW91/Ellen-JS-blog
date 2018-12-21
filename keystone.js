@@ -12,16 +12,14 @@ var nunjucks = require("nunjucks");
 // and documentation.
 
 keystone.init({
-	name: "Marek drives",
-	brand: "Marek drives",
-
+	name: "Ellen Marshal",
+	brand: "Ellen Marshal",
 	sass: "public",
 	static: "public",
 	favicon: "public/favicon.ico",
 	views: "templates/views",
 	"view engine": ".html",
 	"custom engine": cons.nunjucks,
-
 	"auto update": true,
 	session: true,
 	auth: true,
@@ -53,6 +51,12 @@ keystone.set("nav", {
 });
 
 keystone.set("adminui custom styles", "./public/styles/admin.scss");
+
+if (keystone.get("env") === "development") {
+	keystone.set("sass options", {
+		force: true
+	});
+}
 
 // Start Keystone to connect to your database and initialise the web server
 

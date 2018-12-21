@@ -14,7 +14,8 @@
 		<link href="/styles/site.css" rel="stylesheet">
 
 		{# Fonts #}
-		<link href="https://fonts.googleapis.com/css?family=Archivo:400,700|Playfair+Display:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Asap:600|Lato:400,900|Raleway:600,700" rel="stylesheet">
+
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{% if user and user.canAccessKeystone %}
 			<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
@@ -35,8 +36,26 @@
 	</head>
 	<body>
 
+		<header class='header'>
+			<div class='content-container'>
+				<div class='fixed-container'
+				<div class='flex-container--space-between'>
+					<div class='logo-wrap'>
+						<h1>Ellen Marshal 2</h1>
+					</div>
+								<nav class='nav'>
+
+			</nav>
+				</div>To sie udalo!
+				</div>
+
+			</div>
+		</header>
+
+
+
 		{# HEADER #}
-		<div id="header" class="container">
+		<!--<div id="header" class="container">
 
 			{# Customise your site"s navigation by changing the navLinks Array in ./routes/middleware.js
 			   ... or completely change this header to suit your design. #}
@@ -67,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
 		{# BODY #}
 		<div id="body">
@@ -88,12 +107,28 @@
 
 
 		{# FOOTER #}
-		<div id="footer" class="container">
-			{# You don"t _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it! #}
+		<footer id="footer" class="container footer">
+			<div class='footer__logo-wrap'>
+			<h1>Ellen Marshal</h1>
+			</div>
+
 		
+			<nav class='footer__nav-wrap'>
+				<ul>
+					<li><a href='#'>Start here</a></li>
+					<li><a href='#'>My story</a></li>
+					<li><a href='#'>Blog</a></li>
+					<li><a href='#'>Products</a></li>
+					<li><a href='#'>Services</a></li>
+					<li><a href='#'>Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class='footer__social-wrap'>
+
+			</div>
 		
-		
-		</div>
+		</footer>
 
 
 		{# JAVASCRIPT #}

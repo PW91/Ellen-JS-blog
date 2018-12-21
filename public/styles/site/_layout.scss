@@ -1,70 +1,26 @@
-body {
-	background-color: #fafafa;
-}
-
-a {
-	text-decoration: none;
-	color: grey;
-}
-
-.blog {
-	display: flex;
-	justify-content: space-between;
-
-	.post {
-		max-width: 40%;
-		padding: 20px 40px;
-		background-color: #ffffff;
-		box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.3);
-
-		h2 {
-			font-family: "Archivo", sans-serif;
-			font-size: 1.6em;
-			font-weight: 700;
-			line-height: 1.2em;
-		}
-
-		p {
-			font-family: "Playfair Display", serif;
-			font-size: 1em;
-			line-height: 1.6em;
-		}
-
-		img {
-			width: 100%;
-		}
-	}
-}
-
-.wrap {
-	max-width: 960px;
+.content-container {
+	max-width: 1140px;
+	border: 1px solid red;
 	margin: 0 auto;
 }
 
-article {
-	header {
-		margin-bottom: 3em;
-	}
+.flex-container {
+	display: flex;
 
-	img {
-		width: 100%;
-	}
-
-	h1 {
-		font-family: "Archivo", sans-serif;
-		font-size: 3em;
-		font-weight: 700;
-	}
-	p {
-		font-family: "Playfair Display", serif;
-		font-size: 1.2em;
-		line-height: 2em;
-
-		strong {
-			font-family: "Archivo", sans-serif;
-			font-size: 1.2em;
-			display: inline-block;
-			margin-top: 2em;
-		}
+	&--space-between {
+		@extend .flex-container;
+		justify-content: space-between;
 	}
 }
+
+.fixed-container {
+	position: fixed;
+	border: 14px solid blue;
+}
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Asap', sans-serif;
+
+*/
