@@ -1,0 +1,10 @@
+#instafeed {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.instagram-img-wrap {
+	max-width: 12.5%;
+	max-height: 100px;
+	overflow: hidden;
+}

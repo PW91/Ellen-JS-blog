@@ -32,6 +32,9 @@ keystone.import("models");
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
+
+console.log("dupa");
+
 keystone.set("locals", {
 	_: require("lodash"),
 	env: keystone.get("env"),

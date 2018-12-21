@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title>{{ title|default("My Site") }}</title>
+		<title>{{ title|default("ELLEN MARSHAL") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
@@ -36,22 +36,12 @@
 	</head>
 	<body>
 
-		<header class='header'>
-			<div class='content-container'>
-				<div class='fixed-container'
-				<div class='flex-container--space-between'>
-					<div class='logo-wrap'>
-						<h1>Ellen Marshal 2</h1>
-					</div>
-								<nav class='nav'>
 
-			</nav>
-				</div>To sie udalo!
-				</div>
-
-			</div>
-		</header>
-
+		{% include "../components/header.html" %}
+		{% include "../components/hero.html" %}
+		{% include "../components/newsletter.html" %}
+		{% include "../components/instagram.html" %}
+		
 
 
 		{# HEADER #}
@@ -143,7 +133,6 @@
 		{% endif %}
 
 		{# Add scripts that are globally required by your site here. #}
-
 		<script src='js/main.js'></script>
 
 		{# Include template-specific javascript files by extending the js block #}

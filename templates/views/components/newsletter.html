@@ -1,0 +1,34 @@
+<section class='newsletter'>
+    	<div class='content-container'>
+        <div class='flex-container--space-between'>
+        <div class='text-wrap'>
+            <h2>Work and live wherever you want</h2>
+            <p>Join the movement now and let me mentor you</p>
+</div>            
+           {% if enquirySubmitted %}
+			<h3>Thanks for getting in touch.</h3>
+		{% else %}
+
+					<form method="post">
+						<input type="hidden" name="action" value="contact">
+
+						{% set class = ( "has-error" if validationErrors.email else "" ) %}
+						<div class="form-group {{ class }}">
+							<label>
+								<span>Email</span>
+								<input type="email" name="email" value="{{ formData.email }}" class="form-control">
+							</label>
+						</div>
+
+
+
+
+						<div class="form-actions">
+							<button type="submit">Send</button>
+						</div>
+					</form>
+
+		{% endif %}
+        </div>
+        </div>
+</section>

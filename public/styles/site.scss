@@ -1,3 +1,10 @@
 @import "node_modules/normalize.css/normalize";
-@import "site/variables";
-@import "site/layout";
+
+@import "site/partials/variables";
+@import "site/partials/typography";
+@import "site/partials/layout";
+
+@import "site/components/header";
+@import "site/components/hero";
+@import "site/components/newsletter";
+@import "site/components/instagram";
