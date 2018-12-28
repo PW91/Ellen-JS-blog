@@ -1,0 +1,19 @@
+.section-contact {
+	background-color: #e5e5e5;
+	padding: 110px 0;
+}
+
+.contact-box {
+	background-color: $white;
+	padding: 60px;
+	box-shadow: 2px 4px 30px rgba(165, 165, 165, 0.2);
+	border: 0.5px solid #d6d6d6;
+
+	.text-wrap {
+		padding: 0 45px 0 0;
+
+		p {
+			opacity: 0.6;
+		}
+	}
+}

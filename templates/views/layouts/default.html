@@ -14,7 +14,7 @@
 		<link href="/styles/site.css" rel="stylesheet">
 
 		{# Fonts #}
-		<link href="https://fonts.googleapis.com/css?family=Asap:600|Lato:400,900|Raleway:600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,900|Raleway:600,700,800" rel="stylesheet">
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{% if user and user.canAccessKeystone %}
@@ -38,9 +38,6 @@
 
 
 		{% include "../components/header.html" %}
-		{% include "../components/hero.html" %}
-		{% include "../components/newsletter.html" %}
-		{% include "../components/instagram.html" %}
 		
 
 
@@ -79,7 +76,7 @@
 		</div>-->
 
 		{# BODY #}
-		<div id="body">
+		<div class='page'>
 			{# NOTE:
 			   There is no .container wrapping class around body blocks to allow more flexibility in design.
 			   Remember to include it in your templates when you override the intro and content blocks! #}
@@ -97,29 +94,8 @@
 
 
 		{# FOOTER #}
-		<footer id="footer" class="container footer">
-			<div class='footer__logo-wrap'>
-			<h1>Ellen Marshal</h1>
-			</div>
 
-		
-			<nav class='footer__nav-wrap'>
-				<ul>
-					<li><a href='#'>Start here</a></li>
-					<li><a href='#'>My story</a></li>
-					<li><a href='#'>Blog</a></li>
-					<li><a href='#'>Products</a></li>
-					<li><a href='#'>Services</a></li>
-					<li><a href='#'>Contact</a></li>
-				</ul>
-			</nav>
-
-			<div class='footer__social-wrap'>
-
-			</div>
-		
-		</footer>
-
+			{% include "../components/footer.html" %}
 
 		{# JAVASCRIPT #}
 

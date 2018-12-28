@@ -1,0 +1,21 @@
+.section-quote {
+	background-image: url("../images/quote-background.png");
+	background-size: cover;
+	padding: 95px 0;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.quote-wrap {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+
+	blockquote {
+		@extend .f-size-medium;
+		color: $white;
+		font-family: $raleway;
+		font-weight: $bold;
+		text-transform: uppercase;
+	}
+}

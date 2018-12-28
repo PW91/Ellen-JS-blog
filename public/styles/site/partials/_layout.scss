@@ -1,11 +1,21 @@
 .content-container {
-	max-width: $breakpoint-wide;
+	max-width: $breakpoint-desktop;
 	margin: 0 auto;
 }
 
 .flex-container {
 	display: flex;
 	width: 100%;
+
+	&--wrap {
+		@extend .flex-container;
+		flex-wrap: wrap;
+	}
+
+	&--justify-center {
+		@extend .flex-container;
+		justify-content: center;
+	}
 
 	&--space-between {
 		@extend .flex-container;
@@ -16,9 +26,47 @@
 		@extend .flex-container;
 		align-items: flex-end;
 	}
+
+	&--align-center {
+		@extend .flex-container;
+		align-items: center;
+	}
 }
 
 .fixed-container {
 	position: fixed;
-	width: $breakpoint-wide;
+	width: 100%;
+}
+
+.page {
+}
+
+.btn {
+	@extend .f-size-small;
+	font-family: $lato;
+	font-weight: $bold;
+	border: 3px solid $primary;
+	color: $primary;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	transition: all 300ms ease-in-out;
+	display: inline-block;
+	text-align: center;
+
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+
+	&--filled {
+		@extend .btn;
+		background-color: $primary;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $primary;
+			border-color: $white;
+		}
+	}
 }

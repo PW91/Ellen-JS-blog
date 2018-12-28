@@ -1,0 +1,15 @@
+.section-hero {
+	background-image: url("../images/hero-1.png");
+	padding: 200px 0 300px 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.hero-text {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}

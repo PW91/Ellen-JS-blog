@@ -1,16 +1,11 @@
 // font stacks
-$sans-serif: "Roboto", Arial, Helvetica, sans-serif;
-$serif: "Georgia", Cambria, Times New Roman, Times, serif;
-/*
-font-family: 'Raleway', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Asap', sans-serif;
-*/
+$raleway: "Raleway", sans-serif;
+$lato: "Lato", sans-serif;
+$anaktoria: "Anaktoria", "serif";
 
 // font weights
-$light: 300;
 $regular: 400;
-$medium: 500;
+$semi: 500;
 $bold: 700;
 $heavy: 900;
 
@@ -18,77 +13,58 @@ $heavy: 900;
 // SIZES - MOBILE //
 ////////////////////
 
-$singularity-mobile: pxToRem(30); // hero title zmienione
-$huge-mobile: pxToRem(30); // h1 zmienione
-$large-mobile: pxToRem(30); //zmienione
-$bigger-mobile: pxToRem(18); // h4
-$big-mobile: pxToRem(20); // h2 zmienione
-$medium-mobile: pxToRem(16); // h3 zmienione
-$normal-mobile: pxToRem(15); // default p zmienione
-$small-mobile: pxToRem(12); // video info
+$huge-mobile: pxToRem(71);
+$large-mobile: pxToRem(55);
+$bigger-mobile: pxToRem(39);
+$big-mobile: pxToRem(33);
+$medium-mobile: pxToRem(27);
+$normal-mobile: pxToRem(21);
+$small-mobile: pxToRem(14);
 $little-mobile: pxToRem(12);
-$tiny-mobile: pxToRem(12); // video info zmienione
 
 ////////////////////
 // SIZES - TABLET //
 ////////////////////
 
-$singularity-tablet: pxToRem(32);
-$huge-tablet: pxToRem(34);
-$large-tablet: pxToRem(30);
-$bigger-tablet: pxToRem(18);
-$big-tablet: pxToRem(22);
-$medium-tablet: pxToRem(20);
-$normal-tablet: pxToRem(16);
-$small-tablet: pxToRem(13);
-$little-tablet: pxToRem(13);
-$tiny-tablet: pxToRem(12);
+$huge-tablet: pxToRem(76);
+$large-tablet: pxToRem(60);
+$bigger-tablet: pxToRem(42);
+$big-tablet: pxToRem(36);
+$medium-tablet: pxToRem(30);
+$normal-tablet: pxToRem(24);
+$small-tablet: pxToRem(16);
+$little-tablet: pxToRem(14);
 
 //////////////////////
 // SIZES - DESKTOP  //
 //////////////////////
 
-$singularity-desktop: pxToRem(42);
-$huge-desktop: pxToRem(32);
-$large-desktop: pxToRem(28);
-$bigger-desktop: pxToRem(22);
-$big-desktop: pxToRem(20);
-$medium-desktop: pxToRem(17);
-$normal-desktop: pxToRem(15);
-$small-desktop: pxToRem(14);
-$little-desktop: pxToRem(13);
-$tiny-desktop: pxToRem(12);
+$huge-desktop: pxToRem(81);
+$large-desktop: pxToRem(65);
+$bigger-desktop: pxToRem(45);
+$big-desktop: pxToRem(39);
+$medium-desktop: pxToRem(33);
+$normal-desktop: pxToRem(27);
+$small-desktop: pxToRem(18);
+$little-desktop: pxToRem(16);
 
 ///////////////////
 // SIZES - WIDE  //
 ///////////////////
 
-$singularity-wide: pxToRem(52); // h1
-$huge-wide: pxToRem(36); // h2
-$large-wide: pxToRem(32);
-$bigger-wide: pxToRem(24); // h3
-$big-wide: pxToRem(22); // h4
-$medium-wide: pxToRem(18); // h5
-$normal-wide: pxToRem(16); // p
-$small-wide: pxToRem(15);
-$little-wide: pxToRem(14);
-$tiny-wide: pxToRem(12);
-
-.f-size-singularity {
-	font-size: $singularity-mobile;
-	@media screen and (min-width: $breakpoint-tablet) {
-		font-size: $singularity-tablet;
-	}
-	@media screen and (min-width: $breakpoint-desktop) {
-		font-size: $singularity-desktop;
-	}
-	@media screen and (min-width: $breakpoint-wide) {
-		font-size: $singularity-wide;
-	}
-}
+$huge-wide: pxToRem(86);
+$large-wide: pxToRem(70);
+$bigger-wide: pxToRem(48);
+$big-wide: pxToRem(42);
+$medium-wide: pxToRem(36);
+$normal-wide: pxToRem(30);
+$small-wide: pxToRem(20);
+$little-wide: pxToRem(18);
 
 .f-size-huge {
+	line-height: 0.94em;
 	font-size: $huge-mobile;
+
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $huge-tablet;
 	}
@@ -101,6 +77,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-large {
+	line-height: 1.06em;
 	font-size: $large-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $large-tablet;
@@ -114,6 +91,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-bigger {
+	line-height: 1em;
 	font-size: $bigger-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $bigger-tablet;
@@ -140,6 +118,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-medium {
+	line-height: 1.11em;
 	font-size: $medium-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $medium-tablet;
@@ -153,6 +132,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-normal {
+	line-height: 1.14em;
 	font-size: $normal-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $normal-tablet;
@@ -166,6 +146,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-small {
+	line-height: 1.4em;
 	font-size: $small-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $small-tablet;
@@ -179,6 +160,7 @@ $tiny-wide: pxToRem(12);
 }
 
 .f-size-little {
+	line-height: 1em;
 	font-size: $little-mobile;
 	@media screen and (min-width: $breakpoint-tablet) {
 		font-size: $little-tablet;
@@ -188,19 +170,6 @@ $tiny-wide: pxToRem(12);
 	}
 	@media screen and (min-width: $breakpoint-wide) {
 		font-size: $little-wide;
-	}
-}
-
-.f-size-tiny {
-	font-size: $tiny-mobile;
-	@media screen and (min-width: $breakpoint-tablet) {
-		font-size: $tiny-tablet;
-	}
-	@media screen and (min-width: $breakpoint-desktop) {
-		font-size: $tiny-desktop;
-	}
-	@media screen and (min-width: $breakpoint-wide) {
-		font-size: $tiny-wide;
 	}
 }
 
@@ -217,34 +186,55 @@ h3,
 h4,
 .h4,
 h5,
-.h5 {
+.h5,
+h6,
+.h6 {
 	text-rendering: optimizelegibility;
-	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
 
-	a {
+	a,
+	.a {
 		text-decoration: none;
+		transition: color 300ms ease-in-out;
+
+		&:hover {
+			color: $primary;
+		}
 	}
 }
 
-a {
+a,
+.a {
 	text-decoration: none;
 	color: $text-color;
+	transition: color 300ms ease-in-out;
+
+	&:hover {
+		color: $primary;
+	}
 }
 
 h1,
 .h1 {
-	@extend .f-size-singularity;
+	@extend .f-size-huge;
+	font-family: $raleway;
 	font-weight: $bold;
 }
 
 h2,
 .h2 {
-	@extend .f-size-huge;
+	@extend .f-size-large;
+	font-family: $raleway;
+	font-weight: $heavy;
 }
 
 h3,
 .h3 {
 	@extend .f-size-bigger;
+	font-family: $raleway;
+	font-weight: $bold;
 }
 
 h4,
@@ -255,6 +245,15 @@ h4,
 h5,
 .h5 {
 	@extend .f-size-medium;
+	font-family: $raleway;
+	font-weight: $bold;
+}
+
+h6,
+.h6 {
+	@extend .f-size-normal;
+	font-family: $raleway;
+	font-weight: $bold;
 }
 
 /************
@@ -265,8 +264,8 @@ only applies to paragraphs within WRAP
 
 p,
 .p {
-	@extend .f-size-normal;
-
+	@extend .f-size-small;
+	font-family: $lato;
 	-ms-word-wrap: break-word;
 	word-break: break-word; //non-standart css for webkit
 	word-wrap: break-word;

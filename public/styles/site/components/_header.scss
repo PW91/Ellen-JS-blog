@@ -1,5 +1,9 @@
 .header {
-	text-transform: uppercase;
+	&.scrolled {
+		.fixed-container {
+			background-color: black;
+		}
+	}
 }
 
 .h1 {
@@ -9,6 +13,7 @@
 }
 
 .nav {
+	margin: 32px 0;
 	&__menu-list {
 		margin: 0;
 		padding: 0;
@@ -18,6 +23,20 @@
 		display: inline-block;
 		margin: 0 0 0 20px;
 		padding: 0;
+
+		&.active {
+			.nav__menu-link {
+				color: $primary;
+			}
+		}
+	}
+
+	&__menu-link {
+		@extend .f-size-little;
+		font-family: $raleway;
+		font-weight: $semi;
+		color: $white;
+		text-transform: uppercase;
 	}
 
 	&__social-list {
