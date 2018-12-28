@@ -1,5 +1,27 @@
 {% extends "layouts/default.html" %}
 
+
+{% macro blogPost(post) %}
+<div class="post-box" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
+	{% if post.image.exists %}
+		<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
+	{% endif %}
+	<div class='text-wrap'>
+	<h6>
+		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
+	</h6>
+
+	{% if post.content.extended %}
+		<p class="read-more">
+			<a href="/blog/post/{{ post.slug }}">Read more</a>
+		</p>
+	{% endif %}
+	</div>
+</div>
+{% endmacro %}
+
+
+
 {% block content %}
 
 
@@ -39,8 +61,26 @@
 			</div>
 	</section>
 
-	<section class='section-blog'>
+<section class='section-blog'>
+	<div class="wide-content-container">
+		<div class='text-wrap'>
+			<h4>Popular blog posts</h4>
+		</div>
 
+				{% if data.posts.results.length %}
+					<div class="blog-wrap">
+						<div class='flex-container'>
+						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+						</div>
+					</div>
+
+				{% else %}
+					<h3 class="text-muted">There are no posts yet.</h3>
+				{% endif %}
+
+	
+
+</div>
 	</section>
 
 	<section class='section-quote'>

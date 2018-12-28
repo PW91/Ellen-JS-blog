@@ -1,4 +1,7 @@
 .header {
+	.content-container {
+		margin: 32px auto;
+	}
 	&.scrolled {
 		.fixed-container {
 			background-color: black;
@@ -13,7 +16,6 @@
 }
 
 .nav {
-	margin: 32px 0;
 	&__menu-list {
 		margin: 0;
 		padding: 0;
@@ -40,13 +42,13 @@
 	}
 
 	&__social-list {
-		margin: 0;
+		margin: 0 0 0 30px;
 		padding: 0;
 	}
 
 	&__social-item {
 		display: inline-block;
-		margin: 0 0 0 20px;
+		margin: 0 0 0 10px;
 		padding: 0;
 	}
 

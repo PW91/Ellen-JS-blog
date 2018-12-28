@@ -3,6 +3,11 @@
 	margin: 0 auto;
 }
 
+.wide-content-container {
+	max-width: $breakpoint-wide;
+	margin: 0 auto;
+}
+
 .flex-container {
 	display: flex;
 	width: 100%;
