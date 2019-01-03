@@ -84,7 +84,7 @@
 
 				{% if data.posts.results.length %}
 					<div class="blog-wrap">
-						<div class='flex-container--space-between'>
+						<div class='flex-container--space-between flex-container--wrap'>
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 						</div>
 						<div class='btn-wrap'>
