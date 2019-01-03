@@ -1,0 +1,70 @@
+.mystory-page {
+	.story-inspiration {
+		background-color: $black;
+		color: $white;
+		padding: 110px 0;
+
+		.text-wrap {
+			width: 46%;
+		}
+	}
+
+	.title-wrap {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	.story-question {
+		padding: 125px 0 150px 0;
+		text-align: center;
+	}
+
+	.story-help {
+		background-image: url("../images/help-background.png");
+		padding: 110px 0 110px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.story-box {
+		background-color: $white;
+		width: 690px;
+		padding: 100px 70px;
+
+		p {
+			opacity: 0.6;
+		}
+	}
+
+	.story-story {
+		padding: 110px 0;
+		.text-wrap {
+			width: 46%;
+		}
+		p {
+			opacity: 0.6;
+		}
+	}
+
+	.story-goal {
+		background-image: url("../images/goal-background.png");
+		padding: 110px 0 110px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.story-relationship {
+		padding: 110px 0;
+
+		.text-wrap {
+			padding: 20px 0 0 0;
+			margin: 0 150px 0 0;
+		}
+
+		p {
+			opacity: 0.6;
+		}
+	}
+}

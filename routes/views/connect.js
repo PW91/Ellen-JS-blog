@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = "Connect";
+	locals.section = "connect";
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};

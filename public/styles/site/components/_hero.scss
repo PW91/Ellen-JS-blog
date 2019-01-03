@@ -1,15 +1,184 @@
-.section-hero {
-	background-image: url("../images/hero-1.png");
-	padding: 200px 0 300px 0;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+.home-page {
+	.hero-slider {
+		position: relative;
+		height: 39.5vw;
+
+		.hero-text {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: all 2000ms ease-in-out;
+		}
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: none;
+		transition: all 1000ms ease-in-out;
+
+		img {
+			max-width: 100%;
+		}
+
+		&.slide-1 {
+			.hero-text {
+				top: 39%;
+				left: 37%;
+			}
+		}
+
+		&.slide-2 {
+			.hero-text {
+				top: 55%;
+				left: 33%;
+			}
+		}
+
+		&.slide-3 {
+			.hero-text {
+				top: 80%;
+				left: 38%;
+			}
+		}
+
+		&.slide-4 {
+			.hero-text {
+				top: 50%;
+				left: 33%;
+			}
+		}
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+
+			.hero-text {
+				opacity: 1;
+				transition-delay: 1000ms;
+			}
+
+			&.slide-1 {
+				.hero-text {
+					left: 39%;
+				}
+			}
+
+			&.slide-2 {
+				.hero-text {
+					left: 35%;
+				}
+			}
+
+			&.slide-3 {
+				.hero-text {
+					left: 40%;
+				}
+			}
+
+			&.slide-4 {
+				.hero-text {
+					left: 35%;
+				}
+			}
+		}
+	}
 }
 
-.hero-text {
-	display: none;
+.post-page {
+	.section-hero {
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		img {
+			width: 100%;
+			display: block;
+		}
 
-	&.active {
-		display: block;
+		h1 {
+			color: $white;
+		}
+
+		.text-wrap {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+		}
+	}
+
+	.hero-category {
+		a {
+			color: $primary;
+		}
+	}
+
+	.hero-date {
+		color: #e5e5e5;
+	}
+
+	.hero-overlay {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background-color: black;
+		opacity: 0.5;
+		z-index: 2;
+	}
+}
+
+.connect-page {
+	.section-hero {
+		background-image: url("../images/connect-hero.png");
+		padding: 250px 0 250px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+		color: $white;
+	}
+}
+
+.mystory-page {
+	.section-hero {
+		background-image: url("../images/mystory-hero.png");
+		padding: 250px 0 250px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+		color: $black;
+	}
+}
+
+.blog-page {
+	.section-hero {
+		background-image: url("../images/blog-hero.png");
+		padding: 125px 0 125px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: $white;
+
+		.text-wrap {
+			max-width: 680px;
+		}
+	}
+}
+
+.faq-page {
+	.section-hero {
+		background-image: url("../images/faq-hero.png");
+		padding: 250px 0 250px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: $white;
+		text-align: center;
 	}
 }

@@ -41,9 +41,19 @@
 .fixed-container {
 	position: fixed;
 	width: 100%;
+	z-index: 9999;
 }
 
-.page {
+.primary-color {
+	color: $primary;
+}
+
+.grid-65 {
+	width: 65%;
+}
+
+.grid-35 {
+	width: 35%;
 }
 
 .btn {

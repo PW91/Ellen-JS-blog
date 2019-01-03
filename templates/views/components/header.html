@@ -4,18 +4,38 @@
         <div class='flex-container--space-between flex-container--align-bottom'>
             <div class='logo-wrap'>
                 <a href="/">
-                    <img src='./images/logo-header.png' class='logo-img logo-header'/>
+                    <img src='/images/logo-header.png' class='logo-img logo-header'/>
                 </a>
             </div>
                 <nav class='nav'>
                     <div class='flex-container--space-between flex-container--align-center'>
                         <ul class='nav__menu-list'>
-                            <li class='nav__menu-item active'><a class='nav__menu-link' href="/">Start here</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/mystory">My story</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/blog">Blog</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/learn">Learn</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/services">Services</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/connect">Connect</a></li>
+             
+                            <li class='nav__menu-item {%if section == "home" %} active {%endif%}'><a class='nav__menu-link' href="/">Start here</a></li>
+                            <li class='nav__menu-item {%if section == "mystory" %} active {%endif%}'>
+                            <a class='nav__menu-link' href="/mystory">My story</a>
+                            <div class='nav__secondary-menu'>
+                                <div class='nav__secondary-menu-content'>
+                                    <a class='nav__menu-link nav__menu-link-secondary {%if section == "faq" %} active {%endif%}' href="/faq">FAQ</a>
+                                </div>
+                            </div>
+                            </li>
+                            <li class='nav__menu-item {%if section == "blog" %} active {%endif%}'>
+                                <a class='nav__menu-link' href="/blog">Blog</a>
+
+                            <div class='nav__secondary-menu'>
+                                <div class='nav__secondary-menu-content'>
+                                    <a class='nav__menu-link nav__menu-link-secondary {%if section == "aaa" %} active {%endif%}' href="/blog">Business</a>
+                                    <a class='nav__menu-link nav__menu-link-secondary {%if section == "aaa" %} active {%endif%}' href="/blog">Travel</a>
+                                    <a class='nav__menu-link nav__menu-link-secondary {%if section == "aaa" %} active {%endif%}' href="/blog">Lifestyle</a>
+                                </div>
+                            </div>
+                            
+                            
+                            </li>
+                            <li class='nav__menu-item {%if section == "learn" %} active {%endif%}'><a class='nav__menu-link' href="/learn">Learn</a></li>
+                            <li class='nav__menu-item {%if section == "services" %} active {%endif%}'><a class='nav__menu-link' href="/services">Services</a></li>
+                            <li class='nav__menu-item {%if section == "connect" %} active {%endif%}'><a class='nav__menu-link' href="/connect">Connect</a></li>
                         </ul>
                         <ul class="nav__social-list">
                             <li class='nav__social-item'><a class='nav__menu-link' href="#"><img class='nav__social-img' src='/images/twitter.png'/></a></li>

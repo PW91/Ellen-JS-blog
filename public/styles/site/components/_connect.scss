@@ -1,0 +1,80 @@
+.connect-page {
+	.connect-portrait {
+		background-image: url("../images/connect-portrait.png");
+		padding: 400px 0 30px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+
+	.btn--filled {
+		padding: 15px 100px;
+	}
+
+	.connect {
+		padding: 75px 0;
+		&-socials {
+			margin: 40px 0 70px 0;
+		}
+		&__social-list {
+			margin: 0;
+			padding: 0;
+		}
+
+		&__social-item {
+			background-color: $black;
+			display: inline-block;
+			margin: 0 30px 0 0;
+			padding: 0;
+			border-radius: 50%;
+			width: 53px;
+			height: 53px;
+			position: relative;
+		}
+
+		&__social-img {
+			max-width: 24px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.text-wrap {
+			margin-right: 90px;
+
+			p {
+				opacity: 0.6;
+			}
+		}
+
+		&-locations {
+			margin-top: 60px;
+			background-color: $black;
+			color: $white;
+			padding: 40px 30px;
+
+			p {
+				opacity: 0.95;
+			}
+
+			h6 {
+				&:last-child {
+					margin-top: 40px;
+				}
+			}
+
+			h4 {
+				font-family: $raleway;
+				text-align: center;
+				margin-right: 30px;
+			}
+
+			.single-location {
+				border-bottom: 0.5px solid #d6d6d6;
+				padding: 40px 0 20px 0;
+			}
+		}
+	}
+}

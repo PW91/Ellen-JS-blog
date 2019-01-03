@@ -3,18 +3,18 @@
         <div class='flex-container--wrap'>
             <div class='logo-wrap'>
                 <a href="/">
-                    <img src='./images/logo-footer.png' class='logo-img logo-footer'/>
+                    <img src='/images/logo-footer.png' class='logo-img logo-footer'/>
                 </a>
             </div>
                 <nav class='nav'>
                     <div class='flex-container--wrap'>
                         <ul class='nav__menu-list'>
-                            <li class='nav__menu-item active'><a class='nav__menu-link' href="/">Start here</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/mystory">My story</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/blog">Blog</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/learn">Learn</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/services">Services</a></li>
-                            <li class='nav__menu-item'><a class='nav__menu-link' href="/connect">Connect</a></li>
+                            <li class='nav__menu-item {%if section == "home" %} active {%endif%}'><a class='nav__menu-link' href="/">Start here</a></li>
+                            <li class='nav__menu-item {%if section == "mystory" %} active {%endif%}'><a class='nav__menu-link' href="/mystory">My story</a></li>
+                            <li class='nav__menu-item {%if section == "blog" %} active {%endif%}'><a class='nav__menu-link' href="/blog">Blog</a></li>
+                            <li class='nav__menu-item {%if section == "learn" %} active {%endif%}'><a class='nav__menu-link' href="/learn">Learn</a></li>
+                            <li class='nav__menu-item {%if section == "services" %} active {%endif%}'><a class='nav__menu-link' href="/services">Services</a></li>
+                            <li class='nav__menu-item {%if section == "connect" %} active {%endif%}'><a class='nav__menu-link' href="/connect">Connect</a></li>
                         </ul>
                         <ul class="nav__social-list">
                             <li class='nav__social-item'><a class='nav__menu-link' href="#"><img class='nav__social-img' src='/images/twitter.png'/></a></li>

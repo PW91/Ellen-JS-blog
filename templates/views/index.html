@@ -4,7 +4,7 @@
 {% macro blogPost(post) %}
 <div class="post-box" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
 	{% if post.image.exists %}
-		<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
+		<img src="{{ post._.image.fit(500,350) }}" class="img pull-right">
 	{% endif %}
 	<div class='text-wrap'>
 	<h6>
@@ -24,15 +24,30 @@
 
 {% block content %}
 
-
+<div class='home-page'>
 
 	<section class='section-hero'>
-	<div class='content-container'>
-			<img src='./images/hero-text-1.png' class='hero-text active'/>
-			<img src='./images/hero-text-2.png' class='hero-text'/>
-			<img src='./images/hero-text-3.png' class='hero-text'/>
-			<img src='./images/hero-text-4.png' class='hero-text'/>
-		</div>
+
+			<div class='hero-slider'>
+				<div class='slide slide-1 active'>
+					<img src='/images/home-hero-1.png' class='hero-img'/>
+					<img src='/images/hero-text-1.png' class='hero-text'/>
+				</div>
+				<div class='slide slide-2'>
+					<img src='/images/home-hero-2.png' class='hero-img'/>
+					<img src='/images/hero-text-2.png' class='hero-text'/>
+				</div>
+				<div class='slide slide-3'>
+					<img src='/images/home-hero-3.png' class='hero-img'/>
+					<img src='/images/hero-text-3.png' class='hero-text'/>
+		
+				</div>
+				<div class='slide slide-4'>
+					<img src='/images/home-hero-4.png' class='hero-img'/>
+					<img src='/images/hero-text-4.png' class='hero-text'/>
+				</div>
+
+
 	</section>
 
 	<section class='section-cta'>
@@ -69,8 +84,11 @@
 
 				{% if data.posts.results.length %}
 					<div class="blog-wrap">
-						<div class='flex-container'>
+						<div class='flex-container--space-between'>
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+						</div>
+						<div class='btn-wrap'>
+						<a href='/blog' class='btn'>View all posts</a>
 						</div>
 					</div>
 
@@ -110,7 +128,7 @@
 			</div>
 	</section>
 
-
+</div>
 
 
 

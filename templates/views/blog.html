@@ -1,60 +1,79 @@
 {% extends "layouts/default.html" %}
 
+
+
+
 {% macro blogPost(post) %}
-<div class="post" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
-	<h2>
-		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
-	</h2>
-	<p class="lead text-muted">
-		{% if post.publishedDate %}
-			<br>on {{ post._.publishedDate.format("MMMM Do, YYYY") }}
-		{% endif %}
-		{% if post.categories and post.categories.length %}
-			<br> {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
-		{% endif %}
-	</p>
+<div class="post-box" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
 	{% if post.image.exists %}
-		<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
+		<img src="{{ post._.image.fit(500,350) }}" class="img pull-right">
 	{% endif %}
-	<p>{{ post.content.brief|safe }}</p>
+	<div class='text-wrap'>
+	<h6>
+		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
+	</h6>
+
 	{% if post.content.extended %}
 		<p class="read-more">
-			<a href="/blog/post/{{ post.slug }}">Read more...</a>
+			<a href="/blog/post/{{ post.slug }}">Read more</a>
 		</p>
 	{% endif %}
+	</div>
 </div>
 {% endmacro %}
 
-{% block intro %}
-<div class="container">
-	{% set title = ( data.category.name if data.category else "Blog" ) %}
-	<h1>{{ title }}</h1>
-</div>
-{% endblock %}
+
+
+
+
+
 
 {% block content %}
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
+
+
+<div class='blog-page'>
+	<section class='section-hero'>
+	<div class='content-container'>
+			<div class='text-wrap'>
+			<h1>My blog</h1>
+			<p>In my blog I share my insights, tips and lessons I have learned from travelling the world over 4 years and being a passionate entrepreneur for the past 2 years. I have failed, made countless mistakes, and did over 1 million dollars in sales in my first year online. </p>
+<p>My mission now is to cultivate passion and mentor the next generation of leaders. Just remember, reading my articles won’t automatically turn you into a bona fide superstar. You have to grind everyday to reach your full potential. Use these life lessons to help motivate you to create the life of your dreams.</p>
+<h6>If you really think you have what it takes, contact me and let’s work together. </h6> 
+</div>
+		</div>
+	</section>
+
+
+	<section class='section-blog'>
+
+		<div class='wide-content-container'>
+			<div class='categories-wrap'>
+			{% if data.categories.length %}
+	
+	
+				<div class='flex-container--justify-center'>
+					{% set class = ( "active" if not data.category else "" ) %}
+					<h6><a href="/blog" class="{{ class }} category-link">All</a></h6>
+					{% for cat in data.categories %} {% set class = ( "active" if data.category and data.category.id == cat.id else "" ) %}
+						<h6><a href="/blog/{{ cat.key }}" class="{{ class }} category-link">{{ cat.name }}</a></h6>
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+	
+
+
 			{% if filters.category and not data.category %}
 				<h3 class="text-muted">Invalid Category.</h3>
 			{% else %}
 				{% if data.posts.results.length %}
-					{% if data.posts.totalPages > 1 %}
-						<h4 class="text-weight-normal">
-							Showing
-							<strong>{{ data.posts.first }}</strong>
-							to
-							<strong>{{ data.posts.last }}</strong>
-							of
-							<strong>{{ data.posts.total }}</strong>
-							posts.
-						</h4>
-					{% else %}
-						<h4 class="text-weight-normal">Showing {{ utils.plural(data.posts.results.length, "* post") }}.</h4>
-					{% endif %}
-					<div class="blog">
+
+	
+
+					<div class="blog-wrap">
+						<div class='flex-container--space-between'>
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+					</div>
 					</div>
 					{% if data.posts.totalPages > 1 %}
 						<ul class="pagination">
@@ -104,19 +123,12 @@
 					{% endif %}
 				{% endif %}
 			{% endif %}
+
 		</div>
-		{% if data.categories.length %}
-			<div class="col-sm-4 col-md-3">
-				<h2>Categories</h2>
-				<div class="list-group" style="margin-top: 70px;">
-					{% set class = ( "active" if not data.category else "" ) %}
-					<a href="/blog" class="{{ class }} list-group-item">All Categories</a>
-					{% for cat in data.categories %} {% set class = ( "active" if data.category and data.category.id == cat.id else "" ) %}
-						<a href="/blog/{{ cat.key }}" class="{{ class }} list-group-item">{{ cat.name }}</a>
-					{% endfor %}
-				</div>
-			</div>
-		{% endif %}
-	</div>
+	</section>
 </div>
+
+
+
+
 {% endblock %}

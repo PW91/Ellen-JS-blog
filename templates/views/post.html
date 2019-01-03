@@ -2,43 +2,90 @@
 
 {% block content %}
 
-				<div class='wrap'>
+{% macro blogPost(post) %}
+<div class="post-box" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
+	{% if post.image.exists %}
+		<img src="{{ post._.image.fit(500,500) }}" class="img pull-right">
+	{% endif %}
+	<div class='text-wrap'>
+	<h6>
+		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
+	</h6>
 
-				<article>
-					<p>
-						<a href="/">&larr; Wróć</a>
-					</p>
+	{% if post.content.extended %}
+		<p class="read-more">
+			<a href="/blog/post/{{ post.slug }}">Read more</a>
+		</p>
+	{% endif %}
+	</div>
+</div>
+{% endmacro %}
 
-					{% if not data.post %}
-						<h2>Invalid Post.</h2>
-					{% else %}
-						<header>
-							<h1>{{ data.post.title }}</h1>
-							{% if data.post.publishedDate %}
-								on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
-							{% endif %}
-		
+
+
+
+<div class='post-page'>
+
+	<section class='section-hero'>
+		<div class='hero-overlay'></div>
+				<img src="{{ data.post.image.url }}">
+			<div class='text-wrap'>
+<h6>
+<span class='hero-category'>
+
 							{% if data.post.categories and data.post.categories.length %}
-								{% for cat in data.post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < data.post.categories.length %}, {% endif %}{% endfor %}
-											{% endif %}
+								{% for cat in data.post.categories %}
+								<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>
+								{% if loop.index < data.post.categories.length %}, 
+								{% endif %}
+								{% endfor %}
+							{% endif %}
+</span>
+<span class='hero-date'>
+{{ data.post._.publishedDate.format("D/M/YYYY") }}
 
 
-						</header>
-						<div class="post">
-							{% if data.post.image.exists %}
-								<div class="image-wrap">
-									<img src="{{ data.post._.image.fit(750,450) }}" class="img-responsive">
-								</div>
-							{% endif %}
-							{{ data.post.content.full|safe }}
-						
-														{% if data.post.youtube %}
-											
-							<iframe width="560" height="315" src="{{data.post.youtube}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							{% endif %}
+</span>
+
+
+
+
+</h6>
+
+
+
+			<h1>{{ data.post.title }}</h1>
+			</div>
+	</section>
+
+	<section class='post'>
+		<div class='content-container'>
+			<div class='grid-65'>
+								{% if not data.post %}
+						<h6>Invalid Post.</h6>
+					{% else %}
+						<div class='post-title'>
+						<h6>{{ data.post.title }}</h6>
+						</div>
+		
+
+						<div class='post-content'>
+						{{ data.post.content.full|safe }}
+						</div>
+
 						</div>
 					{% endif %}
-				</article>
+			</div>
+			<div class='grid-35'>
+			{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+			</div>
+		</div>
+	
+	</section>
 
-				</div>
+
+
+
+
+
 {% endblock %}
