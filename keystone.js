@@ -51,6 +51,11 @@ keystone.set("nav", {
 	users: "users"
 });
 
+keystone.set(
+	"cloudinary config",
+	"cloudinary://942791718961792:sgobUMT5V8iItfpNJC8J-EDVNUc@dyssjvt6j"
+);
+
 keystone.set("adminui custom styles", "./public/styles/admin.scss");
 
 if (keystone.get("env") === "development") {
