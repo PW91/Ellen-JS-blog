@@ -62,12 +62,26 @@
 	.categories-wrap {
 		text-align: center;
 
-		.category-link {
-			margin: 0 10px;
+		h6 {
+			margin: 0 25px 0 0;
+			padding: 0 25px 0 0;
+			border-right: 4px solid $black;
 
+			&:last-child {
+				border: none;
+			}
+		}
+
+		.category-link {
 			&.active {
 				color: $primary;
 			}
 		}
+	}
+}
+
+@media (max-width: $breakpoint-wide) {
+	.post-box {
+		width: 48%;
 	}
 }

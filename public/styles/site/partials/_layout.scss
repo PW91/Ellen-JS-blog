@@ -85,3 +85,9 @@
 		}
 	}
 }
+
+@media (max-width: $breakpoint-wide) {
+	.wide-content-container {
+		max-width: $breakpoint-desktop;
+	}
+}

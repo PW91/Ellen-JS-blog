@@ -22,21 +22,20 @@
 	&__secondary-menu {
 		display: none;
 		position: absolute;
-		top: -20px;
+		top: 15px;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: -1;
 	}
 
 	&__secondary-menu-content {
 		background-color: $white;
-		margin: 55px 0 0 0;
-		padding: 20px 60px;
+		margin: 20px 0 0 0;
+		padding: 10px 60px;
 		position: relative;
 		text-align: center;
 
 		.nav__menu-link {
-			line-height: 1.5em;
+			line-height: 3em;
 			color: $black;
 		}
 

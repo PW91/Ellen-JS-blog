@@ -153,6 +153,16 @@
 		background-repeat: no-repeat;
 		text-align: center;
 		color: $black;
+
+		.text-wrap {
+			margin: 0 0 0 auto;
+			max-width: 500px;
+			text-align: left;
+
+			p {
+				opacity: 0.6;
+			}
+		}
 	}
 }
 

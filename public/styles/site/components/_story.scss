@@ -17,6 +17,10 @@
 	.story-question {
 		padding: 125px 0 150px 0;
 		text-align: center;
+
+		h6 {
+			margin-bottom: 20px;
+		}
 	}
 
 	.story-help {
@@ -29,7 +33,7 @@
 
 	.story-box {
 		background-color: $white;
-		width: 690px;
+		width: 550px;
 		padding: 100px 70px;
 
 		p {
@@ -53,6 +57,10 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+
+		.story-box {
+			margin: 0 0 0 auto;
+		}
 	}
 
 	.story-relationship {
@@ -64,6 +72,13 @@
 		}
 
 		p {
+			opacity: 0.6;
+		}
+
+		h4 {
+			margin-top: 50px;
+			font-family: $anaktoria;
+			text-transform: capitalize;
 			opacity: 0.6;
 		}
 	}

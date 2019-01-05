@@ -9,8 +9,14 @@
 	.faq-categories {
 		margin: 0 0 90px 0;
 		.category {
-			margin: 0 10px 0 0;
+			margin: 0 25px 0 0;
+			padding: 0 25px 0 0;
 			cursor: pointer;
+			border-right: 4px solid #e7e7e7;
+
+			&:last-child {
+				border: none;
+			}
 
 			&:hover {
 				color: $primary;
@@ -41,13 +47,22 @@
 	.single-question {
 		border-bottom: 1px solid #e7e7e7;
 
+		&:last-child {
+			border: none;
+		}
+
 		&.active {
 			.title-wrap {
 				opacity: 1;
+
+				p {
+					font-weight: $bold;
+				}
 			}
 
 			.text-wrap {
 				display: block;
+				padding-bottom: 50px;
 			}
 		}
 
@@ -59,6 +74,13 @@
 		.text-wrap {
 			opacity: 0.6;
 			display: none;
+
+			ul {
+				li {
+					@extend .f-size-small;
+					font-family: $lato;
+				}
+			}
 		}
 	}
 

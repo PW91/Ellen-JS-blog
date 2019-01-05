@@ -2,8 +2,9 @@
 	background-image: url("../images/quote-background.png");
 	background-size: cover;
 	padding: 95px 0;
-	background-position: center;
+	background-position: 100% 0;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .quote-wrap {

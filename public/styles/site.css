@@ -303,6 +303,10 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: "Anaktoria";
+  src: url("../fonts/Anaktoria.otf"); }
+
 .f-size-huge, h1,
 .h1 {
   line-height: 0.94em;
@@ -405,20 +409,20 @@ template {
       font-size: 1.875rem; } }
 
 .f-size-small, p,
-.p, .btn, .btn--filled {
+.p, .btn, .btn--filled, .faq-page .single-question .text-wrap ul li {
   line-height: 1.4em;
   font-size: 0.875rem; }
   @media screen and (min-width: 767px) {
     .f-size-small, p,
-    .p, .btn, .btn--filled {
+    .p, .btn, .btn--filled, .faq-page .single-question .text-wrap ul li {
       font-size: 1rem; } }
   @media screen and (min-width: 1139px) {
     .f-size-small, p,
-    .p, .btn, .btn--filled {
+    .p, .btn, .btn--filled, .faq-page .single-question .text-wrap ul li {
       font-size: 1.125rem; } }
   @media screen and (min-width: 1599px) {
     .f-size-small, p,
-    .p, .btn, .btn--filled {
+    .p, .btn, .btn--filled, .faq-page .single-question .text-wrap ul li {
       font-size: 1.25rem; } }
 
 .f-size-little, .nav__menu-link, .section-cta p {
@@ -614,6 +618,10 @@ p,
       color: #38e4c0;
       border-color: #fff; }
 
+@media (max-width: 1599px) {
+  .wide-content-container {
+    max-width: 1139px; } }
+
 .header .fixed-container {
   transition: all 300ms ease-in-out; }
 
@@ -629,19 +637,18 @@ p,
 .nav__secondary-menu {
   display: none;
   position: absolute;
-  top: -20px;
+  top: 15px;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: -1; }
+  transform: translateX(-50%); }
 
 .nav__secondary-menu-content {
   background-color: #fff;
-  margin: 55px 0 0 0;
-  padding: 20px 60px;
+  margin: 20px 0 0 0;
+  padding: 10px 60px;
   position: relative;
   text-align: center; }
   .nav__secondary-menu-content .nav__menu-link {
-    line-height: 1.5em;
+    line-height: 3em;
     color: #000; }
   .nav__secondary-menu-content::before {
     position: absolute;
@@ -789,6 +796,12 @@ p,
   background-repeat: no-repeat;
   text-align: center;
   color: #000; }
+  .mystory-page .section-hero .text-wrap {
+    margin: 0 0 0 auto;
+    max-width: 500px;
+    text-align: left; }
+    .mystory-page .section-hero .text-wrap p {
+      opacity: 0.6; }
 
 .blog-page .section-hero {
   background-image: url("../images/blog-hero.png");
@@ -829,15 +842,17 @@ p,
     margin: 40px 0 70px 0; }
   .connect-page .connect__social-list {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    display: flex;
+    justify-content: space-between; }
   .connect-page .connect__social-item {
     background-color: #000;
     display: inline-block;
-    margin: 0 30px 0 0;
+    margin: 0;
     padding: 0;
     border-radius: 50%;
-    width: 53px;
-    height: 53px;
+    width: 70px;
+    height: 70px;
     position: relative; }
   .connect-page .connect__social-img {
     max-width: 24px;
@@ -848,6 +863,12 @@ p,
   .connect-page .connect .text-wrap {
     margin-right: 90px; }
     .connect-page .connect .text-wrap p {
+      opacity: 0.6; }
+      .connect-page .connect .text-wrap p.p--last {
+        margin-top: 50px; }
+    .connect-page .connect .text-wrap h4 {
+      font-family: "Anaktoria", "serif";
+      text-transform: capitalize;
       opacity: 0.6; }
   .connect-page .connect-locations {
     margin-top: 60px;
@@ -880,6 +901,8 @@ p,
 .mystory-page .story-question {
   padding: 125px 0 150px 0;
   text-align: center; }
+  .mystory-page .story-question h6 {
+    margin-bottom: 20px; }
 
 .mystory-page .story-help {
   background-image: url("../images/help-background.png");
@@ -890,7 +913,7 @@ p,
 
 .mystory-page .story-box {
   background-color: #fff;
-  width: 690px;
+  width: 550px;
   padding: 100px 70px; }
   .mystory-page .story-box p {
     opacity: 0.6; }
@@ -908,6 +931,8 @@ p,
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  .mystory-page .story-goal .story-box {
+    margin: 0 0 0 auto; }
 
 .mystory-page .story-relationship {
   padding: 110px 0; }
@@ -915,6 +940,11 @@ p,
     padding: 20px 0 0 0;
     margin: 0 150px 0 0; }
   .mystory-page .story-relationship p {
+    opacity: 0.6; }
+  .mystory-page .story-relationship h4 {
+    margin-top: 50px;
+    font-family: "Anaktoria", "serif";
+    text-transform: capitalize;
     opacity: 0.6; }
 
 .faq-page .faq-quote {
@@ -926,8 +956,12 @@ p,
 .faq-page .faq-categories {
   margin: 0 0 90px 0; }
   .faq-page .faq-categories .category {
-    margin: 0 10px 0 0;
-    cursor: pointer; }
+    margin: 0 25px 0 0;
+    padding: 0 25px 0 0;
+    cursor: pointer;
+    border-right: 4px solid #e7e7e7; }
+    .faq-page .faq-categories .category:last-child {
+      border: none; }
     .faq-page .faq-categories .category:hover {
       color: #38e4c0; }
     .faq-page .faq-categories .category.active {
@@ -946,16 +980,23 @@ p,
 
 .faq-page .single-question {
   border-bottom: 1px solid #e7e7e7; }
+  .faq-page .single-question:last-child {
+    border: none; }
   .faq-page .single-question.active .title-wrap {
     opacity: 1; }
+    .faq-page .single-question.active .title-wrap p {
+      font-weight: 700; }
   .faq-page .single-question.active .text-wrap {
-    display: block; }
+    display: block;
+    padding-bottom: 50px; }
   .faq-page .single-question .title-wrap {
     opacity: 0.6;
     cursor: pointer; }
   .faq-page .single-question .text-wrap {
     opacity: 0.6;
     display: none; }
+    .faq-page .single-question .text-wrap ul li {
+      font-family: "Lato", sans-serif; }
 
 .faq-page .post-box {
   width: 100%; }
@@ -1027,17 +1068,26 @@ p,
 
 .blog-page .categories-wrap {
   text-align: center; }
-  .blog-page .categories-wrap .category-link {
-    margin: 0 10px; }
-    .blog-page .categories-wrap .category-link.active {
-      color: #38e4c0; }
+  .blog-page .categories-wrap h6 {
+    margin: 0 25px 0 0;
+    padding: 0 25px 0 0;
+    border-right: 4px solid #000; }
+    .blog-page .categories-wrap h6:last-child {
+      border: none; }
+  .blog-page .categories-wrap .category-link.active {
+    color: #38e4c0; }
+
+@media (max-width: 1599px) {
+  .post-box {
+    width: 48%; } }
 
 .section-quote {
   background-image: url("../images/quote-background.png");
   background-size: cover;
   padding: 95px 0;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .quote-wrap {
   max-width: 960px;

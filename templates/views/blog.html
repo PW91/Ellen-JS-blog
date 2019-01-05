@@ -51,7 +51,7 @@
 			{% if data.categories.length %}
 	
 	
-				<div class='flex-container--justify-center'>
+				<div class='flex-container--justify-center '>
 					{% set class = ( "active" if not data.category else "" ) %}
 					<h6><a href="/blog" class="{{ class }} category-link">All</a></h6>
 					{% for cat in data.categories %} {% set class = ( "active" if data.category and data.category.id == cat.id else "" ) %}
@@ -71,7 +71,7 @@
 	
 
 					<div class="blog-wrap">
-						<div class='flex-container--space-between'>
+						<div class='flex-container--space-between flex-container--wrap'>
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 					</div>
 					</div>
