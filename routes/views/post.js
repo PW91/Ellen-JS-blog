@@ -33,11 +33,12 @@ exports = module.exports = function(req, res) {
 	view.on("init", function(next) {
 		var q = keystone
 			.list("Post")
-			.model.find()
+			.model.find({ _id: { $ne: locals.data.post._id } })
 			.where("state", "published")
+
 			.sort("-publishedDate")
 			.populate("author")
-			.limit("3");
+			.limit(3);
 
 		q.exec(function(err, results) {
 			locals.data.posts = results;

@@ -78,6 +78,18 @@
 			}
 		}
 	}
+
+	.no-post-text-wrap {
+		margin: 100px 0;
+		text-align: center;
+	}
+}
+
+.post-page {
+	.post-box {
+		width: 100%;
+		height: auto;
+	}
 }
 
 @media (max-width: $breakpoint-wide) {

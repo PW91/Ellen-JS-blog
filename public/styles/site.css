@@ -825,6 +825,9 @@ p,
 .post-page .post {
   padding: 75px 0; }
 
+.post-page .grid-65 .text-wrap {
+  margin-right: 90px; }
+
 .connect-page .connect-portrait {
   background-image: url("../images/connect-portrait.png");
   padding: 400px 0 30px 0;
@@ -999,7 +1002,8 @@ p,
       font-family: "Lato", sans-serif; }
 
 .faq-page .post-box {
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
 .section-cta {
   padding: 50px 0 0 0; }
@@ -1076,6 +1080,14 @@ p,
       border: none; }
   .blog-page .categories-wrap .category-link.active {
     color: #38e4c0; }
+
+.blog-page .no-post-text-wrap {
+  margin: 100px 0;
+  text-align: center; }
+
+.post-page .post-box {
+  width: 100%;
+  height: auto; }
 
 @media (max-width: 1599px) {
   .post-box {

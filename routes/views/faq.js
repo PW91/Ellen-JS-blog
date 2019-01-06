@@ -14,6 +14,21 @@ exports = module.exports = function(req, res) {
 		categories: []
 	};
 
+	view.on("init", function(next) {
+		var q = keystone
+			.list("Post")
+			.model.find()
+			.where("state", "published")
+			.sort("-publishedDate")
+			.populate("author")
+			.limit(3);
+
+		q.exec(function(err, results) {
+			locals.data.posts = results;
+			next(err);
+		});
+	});
+
 	// Render the view
 	view.render("faq");
 };

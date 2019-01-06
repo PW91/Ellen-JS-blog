@@ -60,7 +60,9 @@
 
 	<section class='post'>
 		<div class='content-container'>
+			<div class='flex-container'>
 			<div class='grid-65'>
+				<div class='text-wrap'>
 								{% if not data.post %}
 						<h6>Invalid Post.</h6>
 					{% else %}
@@ -73,11 +75,13 @@
 						{{ data.post.content.full|safe }}
 						</div>
 
-						</div>
+			
 					{% endif %}
+				</div>
 			</div>
 			<div class='grid-35'>
-			{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+			{% for post in data.posts %} {{ blogPost(post) }} {% endfor %}
+			</div>
 			</div>
 		</div>
 	
