@@ -65,11 +65,15 @@ if (singleQuestionEls.length) {
 	const costam = Array.from(singleQuestionEls);
 	costam.forEach(function(question) {
 		question.addEventListener("click", () => {
-			costam.forEach(q => {
-				q.classList.remove("active");
-			});
+			if (question.classList.contains("active")) {
+				question.classList.remove("active");
+			} else {
+				costam.forEach(q => {
+					q.classList.remove("active");
+				});
 
-			question.classList.add("active");
+				question.classList.add("active");
+			}
 		});
 	});
 }

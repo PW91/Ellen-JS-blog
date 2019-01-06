@@ -1,4 +1,5 @@
 .mystory-page {
+	background-color: $background;
 	.story-inspiration {
 		background-color: $black;
 		color: $white;
@@ -27,8 +28,9 @@
 		background-image: url("../images/help-background.png");
 		padding: 110px 0 110px 0;
 		background-size: cover;
-		background-position: center;
+		background-position: 70% 0%;
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 
 	.story-box {
@@ -55,8 +57,9 @@
 		background-image: url("../images/goal-background.png");
 		padding: 110px 0 110px 0;
 		background-size: cover;
-		background-position: center;
+		background-position: 0 100%;
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 
 		.story-box {
 			margin: 0 0 0 auto;
